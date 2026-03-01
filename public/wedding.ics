@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+URL:https://yourweddingsite.com
+Format: YYYYMMDDTHHMMSS
+DTSTART:20261212T100000
+DTEND:20261212T160000
+SUMMARY:Betty & Athul Wedding
+DESCRIPTION:Join us to celebrate our wedding day!
+LOCATION:St. Mary's Church, Kochi, Kerala
+END:VEVENT
+END:VCALENDAR

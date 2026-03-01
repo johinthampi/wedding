@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+.floating-item {
+  animation: floatFall linear infinite;
+  will-change: transform;
+}
+
+@keyframes floatFall {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
+
+  10% {
+    transform: translate(20px, 10vh) rotate(45deg) scale(1.05);
+  }
+
+  20% {
+    transform: translate(-25px, 20vh) rotate(90deg) scale(0.95);
+  }
+
+  30% {
+    transform: translate(15px, 30vh) rotate(140deg) scale(1.05);
+  }
+
+  40% {
+    transform: translate(-20px, 40vh) rotate(180deg) scale(1);
+  }
+
+  50% {
+    transform: translate(25px, 50vh) rotate(220deg) scale(0.95);
+  }
+
+  60% {
+    transform: translate(-15px, 60vh) rotate(260deg) scale(1.05);
+  }
+
+  70% {
+    transform: translate(20px, 70vh) rotate(300deg) scale(1);
+  }
+
+  80% {
+    transform: translate(-25px, 85vh) rotate(330deg) scale(0.98);
+  }
+
+  100% {
+    transform: translate(10px, 110vh) rotate(360deg) scale(1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* wind animation top frame */
+
+.wind-frame {
+  overflow: hidden;
 }
+
+.wind-frame {
+  animation: gentleWind 12s ease-in-out infinite;
+  transform-origin: top center;
+  will-change: transform;
+}
+
+@keyframes gentleWind {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(4px) rotate(-0.4deg);
+  }
+
+  50% {
+    transform: translateY(2px) rotate(0.4deg);
+  }
+
+  75% {
+    transform: translateY(5px) rotate(-0.3deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+
+

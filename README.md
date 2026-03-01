@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+wedding-website/
+│
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx                → Home
+│   ├── story/
+│   │   └── page.tsx
+│   ├── events/
+│   │   └── page.tsx
+│   ├── gallery/
+│   │   └── page.tsx
+│   ├── rsvp/
+│   │   └── page.tsx
+│   ├── travel/
+│   │   └── page.tsx
+│   ├── gifts/
+│   │   └── page.tsx
+│   └── api/
+│       └── rsvp/route.ts       → RSVP backend
+│
+├── components/
+│   ├── ui/
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   └── Modal.tsx
+│   │
+│   ├── layout/
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   └── Container.tsx
+│   │
+│   ├── sections/
+│   │   ├── Hero.tsx
+│   │   ├── Countdown.tsx
+│   │   ├── LoveStory.tsx
+│   │   ├── EventTimeline.tsx
+│   │   ├── GalleryGrid.tsx
+│   │   └── RSVPForm.tsx
+│
+├── lib/
+│   ├── metadata.ts
+│   ├── utils.ts
+│   └── db.ts (if using DB)
+│
+├── public/
+│   ├── images/
+│   ├── fonts/
+│   └── og-image.jpg
+│
+├── styles/
+│   └── globals.css
+│
+└── types/
+    └── index.ts
 
-## Getting Started
+    1️⃣ Home Page (/)
 
-First, run the development server:
+Goal: Emotional + Visual impact
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Sections:
+	•	Hero (Couple name + Date)
+	•	Countdown timer
+	•	Short love story preview
+	•	Event preview
+	•	CTA → RSVP
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    2️⃣ Story Page (/story)
+	•	Timeline style layout
+	•	How they met
+	•	Proposal
+	•	Engagement
+	•	Photos between sections
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+    3️⃣ Events Page (/events)
+	•	Ceremony details
+	•	Reception details
+	•	Map embed
+	•	Dress code
+	•	Schedule timeline
+4️⃣ Gallery Page (/gallery)
+	•	Masonry layout
+	•	Lightbox modal
+	•	Lazy loaded images
+	•	Optimized <Image />
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5️⃣ RSVP Page (/rsvp)
+	•	Name
+	•	Email
+	•	Number of guests
+	•	Meal preference
+	•	Submit → API route
 
-## Learn More
+You can connect this to:
+	•	PostgreSQL (since you already use it)
+	•	Or simple Google Sheets API
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+6️⃣ Travel Page (/travel)
+	•	Hotel suggestions
+	•	Airport info
+	•	Map
+	•	Local attractions
